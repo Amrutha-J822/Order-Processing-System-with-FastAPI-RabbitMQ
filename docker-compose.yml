@@ -1,0 +1,39 @@
+version: '3.8'  # Use the latest version of Docker Compose
+
+services:
+  # Service for FastAPI App
+  app:
+    build: .
+    container_name: order_service
+    ports:
+      - "8000:8000"  # Expose FastAPI app on port 8000
+    depends_on:
+      - rabbitmq      # This ensures that the app starts only after RabbitMQ is ready
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_USER=user
+      - RABBITMQ_PASSWORD=password
+    networks:
+      - app-network
+
+  # Service for RabbitMQ
+  rabbitmq:
+    image: "rabbitmq:management"
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"  # AMQP protocol port for RabbitMQ
+      - "15672:15672" # Web UI for RabbitMQ
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=password
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "check_port_connectivity"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+networks:
+  app-network:
+    driver: bridge
