@@ -29,7 +29,7 @@ A microservices-based Order Processing System built with FastAPI and RabbitMQ, c
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/Amrutha-J822/Order-Processing-System-with-FastAPI-RabbitMQ.git
 cd Order_Service
 ```
 
