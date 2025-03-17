@@ -11,7 +11,7 @@ A microservices-based Order Processing System built with FastAPI and RabbitMQ, c
 - Swagger UI for API documentation
 - RabbitMQ Management Interface
 
-## ��️ Technologies Used
+## 💻 Technologies Used
 
 - **FastAPI**: Modern Python web framework
 - **RabbitMQ**: Message broker for asynchronous communication
