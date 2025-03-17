@@ -121,12 +121,12 @@ docker-compose ps
 
 ## 🚀 Future Improvements
 
-- [1] Add message consumers for order processing
-- [2] Implement database integration
-- [3] Add authentication for API endpoints
-- [4] Implement monitoring and logging
-- [5] Add load balancing
-- [6] Implement order status tracking
+- Add message consumers for order processing
+- Implement database integration
+- Add authentication for API endpoints
+- Implement monitoring and logging
+- Add load balancing
+- Implement order status tracking
 
 ## 🤝 Contributing
 
