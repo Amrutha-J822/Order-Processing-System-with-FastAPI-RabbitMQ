@@ -77,13 +77,13 @@ docker-compose up --build
 }
 ```
 
-## ��️ Project Structure
-Order_Service/
-├── main.py # FastAPI application
-├── worker.py # Message consumer (if implemented)
-├── docker-compose.yml # Docker Compose configuration
-├── Dockerfile # Docker configuration for the app
-└── requirements.txt # Python dependencies
+## 🗃️ Project Structure
+```Order_Service/
+    ├── main.py # FastAPI application
+    ├── worker.py # Message consumer (if implemented)
+    ├── docker-compose.yml # Docker Compose configuration
+    ├── Dockerfile # Docker configuration for the app
+    └── requirements.txt # Python dependencies ```
 
 
 ## 🔧 Docker Commands
